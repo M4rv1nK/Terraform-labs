@@ -5,6 +5,8 @@ resource "aws_instance" "vm" {
 
     associate_public_ip_address = true
 
+    vpc_security_group_ids = [var.security_group]
+
   tags={
     owner=var.tags["owner"]
     Name="${terraform.workspace}-vm"

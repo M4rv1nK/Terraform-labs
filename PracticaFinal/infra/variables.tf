@@ -13,3 +13,7 @@ variable "subnet_id" {
 variable "tags" {
   type = map(any)
 }
+
+variable "security_group" {
+  type = string
+}
